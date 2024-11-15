@@ -1,0 +1,34 @@
+meta {
+  name: query
+  type: http
+  seq: 4
+}
+
+post {
+  url: http://localhost:3000/api/documents/query
+  body: json
+  auth: none
+}
+
+headers {
+  ~Content-Type: multipart/form-data
+}
+
+body:json {
+  {
+  "query": "Tentang apa ini?",
+  "bookName": "ECES_Cards_-_Module_1-5.pdf"
+  }
+}
+
+body:multipart-form {
+  file: @file(/Users/lutfiikbalmajid/Downloads/1698743256_Lutfi-Ikbal-Majid-(1).pdf)
+}
+
+docs {
+  response:
+  {
+    "success": true,
+    "fileName": "fc471582-ccfb-4bf0-9ec6-0a2d84860153-1698743256_Lutfi-Ikbal-Majid-(1).pdf"
+  }
+}

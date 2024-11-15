@@ -1,0 +1,9 @@
+{
+  "version": "1",
+  "name": "ai-service",
+  "type": "collection",
+  "ignore": [
+    "node_modules",
+    ".git"
+  ]
+}

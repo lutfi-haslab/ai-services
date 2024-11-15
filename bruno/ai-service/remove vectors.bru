@@ -1,0 +1,19 @@
+meta {
+  name: remove vectors
+  type: http
+  seq: 8
+}
+
+delete {
+  url: http://localhost:3000/api/documents/remove-vectors/:docId
+  body: json
+  auth: none
+}
+
+params:path {
+  docId: f92aea38-4a78-4ea3-99d8-fc1d522dd6bf
+}
+
+headers {
+  ~Content-Type: multipart/form-data
+}

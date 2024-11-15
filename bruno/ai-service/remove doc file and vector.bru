@@ -1,0 +1,19 @@
+meta {
+  name: remove doc file and vector
+  type: http
+  seq: 9
+}
+
+delete {
+  url: http://localhost:3000/api/documents/remove/doc/file/vectors/:fileName
+  body: json
+  auth: none
+}
+
+params:path {
+  fileName: ECES-Cards-Module-1-5.pdf
+}
+
+headers {
+  ~Content-Type: multipart/form-data
+}

@@ -1,0 +1,19 @@
+meta {
+  name: remove file
+  type: http
+  seq: 7
+}
+
+delete {
+  url: http://localhost:3000/api/documents/remove-file/:fileName
+  body: json
+  auth: none
+}
+
+params:path {
+  fileName: ECES-Cards-Module-1-5.pdf
+}
+
+headers {
+  ~Content-Type: multipart/form-data
+}

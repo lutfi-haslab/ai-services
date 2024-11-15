@@ -1,0 +1,24 @@
+meta {
+  name: vectors
+  type: http
+  seq: 10
+}
+
+get {
+  url: http://localhost:3000/api/documents/vectors?start=2&end=5
+  body: multipartForm
+  auth: none
+}
+
+params:query {
+  start: 2
+  end: 5
+}
+
+headers {
+  ~Content-Type: multipart/form-data
+}
+
+body:multipart-form {
+  file: @file(/Users/lutfiikbalmajid/Documents/ECDE eCourseware_ocred_compressed.pdf)
+}
