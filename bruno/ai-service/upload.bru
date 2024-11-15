@@ -5,7 +5,7 @@ meta {
 }
 
 post {
-  url: http://localhost:3000/api/documents/upload
+  url: {{url}}/api/documents/upload
   body: multipartForm
   auth: none
 }
@@ -15,7 +15,7 @@ headers {
 }
 
 body:multipart-form {
-  file: @file(/Users/lutfiikbalmajid/Documents/ECES_Cards_-_Module_1-5.pdf)
+  file: @file(/Users/lutfiikbalmajid/Documents/ECES-Cards-Module-1-5.pdf)
 }
 
 docs {
